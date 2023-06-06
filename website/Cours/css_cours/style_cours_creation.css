@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Style pour le conteneur */
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+select {
+  font-size: large;
+  padding: 5px;
+}
+
+h2, label, input, textarea, button {
+  color: #fff;
+  text-shadow: 5px 5px 10px #000;
+}
+
+/* Style pour le titre */
+h2 {
+  font-size: 2em;
+  margin-bottom: 0.5em;    
+}
+
+/* Style pour les labels */
+label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-size: large;
+}
+
+label[for="title"] {
+  margin-top: 1em;
+}
+
+/* Style pour les inputs et textarea */
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  background: transparent;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  color: #fff;
+  box-shadow: 0 0 10px 0 #fff;
+}
+
+/* Style pour le bouton */
+button[type="submit"] {
+  background: transparent;
+  padding: 0.5em 1em;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 10px 0 #fff;
+  cursor: pointer;
+  font-size: 1.2em;
+  margin-top: 0.5em;
+  transition: 0.4s;
+}
+
+/* Style pour le bouton au survol */
+button[type="submit"]:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Styles pour le lien "Retour" */
+a {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 0.5em;
+  font-size: large;
+  text-decoration: none;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 #fff;
+  transition: 0.4s;
+}
+
+a:hover {
+  background-color: #fff;
+  color: black;
+}
+  

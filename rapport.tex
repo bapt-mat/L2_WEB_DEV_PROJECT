@@ -1,0 +1,291 @@
+\documentclass[12pt,a4paper]{article}
+%le préambule
+
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{url} % permet l'utilisation de la balise url pour les liens internet
+\usepackage{graphicx} % permet l'utilisation des images
+
+
+\title{Projet - Développement Web}
+\author{Andraud Arthur | Bouvier Baptiste | Mathevon Baptiste}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\newpage
+
+\tableofcontents
+
+\section{Introduction - Présentation du sujet}
+
+Nous avons choisi de créer un site de soutien scolaire, proposant de nombreux services aux étudiants de tout âge et de n'importe quel niveau. Notre site vise à aider les étudiants qui en ont besoin, grâce à différentes fonctionnalités essentielles pour ces élèves.
+
+
+Le site s'appelle "School Learning" et a été crée par Arthur Andraud, Baptiste Mathevon et Baptiste Bouvier. Une base de données a aussi été mise en place afin de stocker les informations et données nécessaires au bon fonctionnement du site (voir ci-dessous).
+
+\section{Structure du site}
+
+\subsection{Diagramme de la base de données}
+
+\begin{center}
+  \includegraphics[scale=0.5]{Diagramme.jpg}
+\end{center}
+
+\subsection{Structure des fichiers}
+
+Tous les fichiers sont classés dans des dossiers, chaque dossier étant associé à une page web.
+Page qui peut par la suite rediriger sur des pages annexes associées.
+
+\subsection{Principales fonctionnalités}
+
+\begin{enumerate}
+    \item Connexion
+    \begin{enumerate}
+        \item Page qui propose de se connecter ou de s'inscrire.
+        \item Des redirections vers l'acceuil, les services ou le contact sont possibles dans la barre de navigation.
+    \end{enumerate}
+    \item Accueil
+    \begin{enumerate}
+        \item Page principale du site.
+        \item Contient une description de site ainsi qu'un chatbot qui répond aux questions de l'utilisateur.
+    \end{enumerate}
+    \item Services
+    \begin{enumerate}
+        \item Présente les différents grades et leur attributs.
+        \item L'utilisateur peut, si il n'a pas encore de grade, faire une demande pour obtenir le grade voulu.
+    \end{enumerate}
+    \item Contact
+    \begin{enumerate}
+        \item Permet de contacter les administrateurs du site, qui recevront le message dans le tableau d'administration.
+    \end{enumerate}
+    \item Boutique
+    \begin{enumerate}
+        \item Propose des petits articles tels que des T-shirts ou des Tasses.
+        \item Permet aux utilisateurs de soutenir le site.
+    \end{enumerate}
+    \item Messagerie
+    \begin{enumerate}
+        \item Messagerie instantanée entre les différents utilisateurs du site.
+        \item Permet de discuter entre élèves, avec un professeur ou un membre de l'administration.
+    \end{enumerate}
+    \item Cours en ligne
+    \begin{enumerate}
+        \item Base de données de cours créés par un professeur.
+        \item N'importe quel membre du site a accès aux cours mis à disposition.
+        \item Seul les rangs de professeurs et supérieurs peuvent créer un cours.
+    \end{enumerate}
+    \item Quizz
+    \begin{enumerate}
+        \item Mise en place de quizz pour aider les étudiants à s'entrainer.
+        \item Seuls les professeurs peuvent créer des quizz.
+    \end{enumerate}
+    \item Forum
+    \begin{enumerate}
+        \item Discussion sur un sujet entre membres du site.
+        \item N'importe quel membre peut accéder aux différents forums et créer son propre forum.
+    \end{enumerate}
+    \item Compte
+    \begin{enumerate}
+        \item Page du compte de l'utilisateur connecté
+        \item Peut modifier ses informations
+    \end{enumerate}
+    \item Administration (si le membre connecté est un administrateur
+    \begin{enumerate}
+        \item Peut rechercher des utilisateurs et a le pouvoir d'effectuer plusieurs actions sur eux.
+        \item si un utilisateur a utilisé la page Contact, les requêtes sont affichés dans un tableau.
+    \end{enumerate}
+\end{enumerate}
+
+\section{Utilisateurs et rôles}
+
+\subsection{Administrateur}
+\begin{enumerate}
+    \item Possède un contrôle total des fonctionnalités du site.
+\end{enumerate}
+\subsection{Modérateur}
+\begin{enumerate}
+    \item Pour le moment, le modérateur n'est pas encore fonctionnel.
+    \item Améliorations possibles : Volonté de mettre en place différents modérateurs pour le forum, les cours et la messagerie par exemple.
+\end{enumerate}
+\subsection{Professeur}
+\begin{enumerate}
+    \item Possède les mêmes accès qu'un membre du site
+    \item Fonctionnalité supplémentaire : peut créer des cours sur le site.
+\end{enumerate}
+\subsection{Membre}
+\begin{enumerate}
+    \item Lorsqu'il est inscrit, l'utilisateur est un membre du site.
+    \item Il débloque l'accès aux cours, aux forums et à la messagerie.
+    \item Il ne peut par contre pas créer de cours.
+    \item Il peut bien sûr accéder à son compte.
+\end{enumerate}
+\subsection{Visiteur}
+\begin{enumerate}
+    \item Tant que l'utilisateur n'est pas inscrit/connecté, il est visiteur
+    \item Il peut accéder à la page d'accueil, aux services et à la page de contact.
+\end{enumerate}
+
+\section{Description des fonctionnalités}
+
+\subsection{Connexion}
+\begin{enumerate}
+    \item Initialement, la page propose l'interface de connexion.
+    \item Si l'utilisateur clique sur "s'inscrire" une fonctionnalité JavaScript permet d'afficher l'interface d'inscription.
+    \item Du JavaScript permet aussi de réduire la boîte de connexion et d'afficher le mot de passe.
+    \item Si le JavaScript est désactivé l'interface propose à la fois la connexion et l'inscription et les boîtes ne peuvent plus être réduites, le mot de passe ne peut plus être dévoilé.
+\end{enumerate}
+
+\subsection{Accueil}
+\begin{enumerate}
+    \item La barre de navigation permet d'accéder à toutes les autres pages du site.
+    \item La page contient une description du site.
+    \item Le chatbot peut répondre aux questions de l'utilisateur en fonction de mots-clés reconnus. Il peut indiquer comment contacter un professeur, quels cours sont disponibles, etc...
+    \item il sert surtout de guide pour l'utilisateur donc ne possède pas une grande quantité de réponses.
+    \item Le chatbot fonctionne avec php, seule la possibilité de réduire et afficher le chatbot utilise du javascript.
+\end{enumerate}
+
+\subsection{Services}
+\begin{enumerate}
+    \item Cette page permet à un utilisateur connecté de candidater pour être modérateur ou professeur.
+    \item si l'utilisateur n'est pas connecté, les services lui demandent de se connecter.
+    \item si l'utilisateur est connecté, il possède le "grade membre" et donc un message s'affiche pour le grade membre. Il peut alors candidater au poste de professeur ou au poste de modérateur. Pour chacun des 2 grades, l'utilisateur devra entrer ses motivations/un diplôme pour pouvoir candidater.
+    \item si l'utilisateur est déjà professeur, un message adéquat s'affiche pour ce grade, il peut toujours candidater en tant que modérateur.
+    \item si l'utilisateur est déjà modérateur ou administrateur, un message s'affiche pour les différents grades.
+    \item le message en question : "Vous êtes déjà [rôle] !".
+\end{enumerate}
+    
+\subsection{Contact}
+\begin{enumerate}
+    \item Cette page permet à n'importe qui de contacter le site.
+    \item l'utilisateur doit rentrer ses informations (nom/mail) et le sujet du message pour pouvoir envoyer.
+    \item Le message et les informations sont alors stockés dans la base de données et seront affichés sur la page d'administration (Voir Administration).
+\end{enumerate}
+
+\subsection{Boutique}
+\begin{enumerate}
+    \item Propose des petits articles pour soutenir le site. N'importe qui peut accéder à la boutique et ajouter des articles à son panier.
+    \item L'utilisateur doit remplir son nom et son adresse pour pouvoir passer la commande.
+    \item Le prix du panier est calculé en php et la commande est stockée dans la base de donnée.
+\end{enumerate}
+
+\subsection{Messagerie}
+\begin{enumerate}
+    \item Elle permet aux membres de s'envoyer des messages entre eux, envoyer un messages aux professeurs ou à un membre de l'administration.
+    \item La première page présente tous les membres du site et propose une barre de recherche pour rechercher le nom d'un membre.
+    \item Si l'utilisateur a reçu des messages de quelqu'un d'autre, une notification s'affiche à côté du nom de la personne et place cette personne en haut du tableau.
+    \item Si l'utilisateur a reçu des messages, une notification apparait sur les autres pages du site, à côté de Messagerie, qui indique le nombre de messages non-lus.
+    \item Les messages :
+    \begin{enumerate}
+        \item https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js est utilisée pour rendre la messagerie instantanée.
+        \item Si le JavaScript est désactivé la messagerie fonctionne toujours mais n'est plus instantanée.
+        \item Les messages sont stockés dans la base de données dans la table 'messages'.
+        \item Du JavaScript permet aussi d'utiliser la touche 'Entrée' pour envoyer un message.
+    \end{enumerate}
+\end{enumerate}
+
+\subsection{Cours en ligne}
+\begin{enumerate}
+    \item La page principale propose de rechercher des cours en fonction d'une matière, ou alors de créer un cours si le grade le permet.
+    \item Si aucun cours de la matière recherchée n'est présent dans la base de données, un message s'affiche. Sinon elle enmène sur la page qui affiche tous les cours de la matière recherchée.
+    \item Liste des cours :
+    \begin{enumerate}
+        \item Affiche tous les cours de la matière en question.
+        \item Le cours peut être supprimé par le créateur ou par un membre de l'administration.
+        \item Un système de "like" est mis en place, n'importe qui peut "aimer" un cours et donc le valoriser.
+    \end{enumerate}
+    \item Création de cours :
+    \begin{enumerate}
+        \item Elle permet à un professeur de créer un cours d'une matière qu'il sélectionne.
+        \item Un titre de page, titre de partie et contenu d'une partie sont obligatoires, deux autres parties peuvent être complétées, elles sont optionnelles.
+        \item L'utilisateur peut aussi insérer une image pour son cours.
+    \end{enumerate}
+    \item Cours :
+    \begin{enumerate}
+        \item Le cours s'affiche sur toute la page, avec un bouton pour revenir à la page d'avant.
+        \item Le créateur a la possibilité de modifier son cours "en direct" en bas de page.
+        \item Un membre a la possibilité de télécharger le cours en pdf. Pour se faire, nous utilisons http://www.fpdf.org/ qui permet de générer des fichiers PDF en pur PHP.
+    \end{enumerate}
+\end{enumerate}
+
+\subsection{Quizz}
+\begin{enumerate}
+    \item Mise en place de quizz qui permettent aux membres de s'entraîner.
+    \item Ils peuvent être créés par un professeur.
+\end{enumerate}
+
+\subsection{Forum}
+\begin{enumerate}
+    \item La page principale liste les sujets déjà créés. Un membre peut créer un sujet.
+    \item Le créateur du sujet ou un administrateur peut supprimer le sujet. De même pour les messages dans le forum.
+    \item Les messages sont affichés au nombre de 5 puis une fonctionnalité php permet de simuler des pages de messages, évitant une grande quantité de messages affichés d'un coup.
+    \item Les membres peuvent poster un message avec ou sans image.
+\end{enumerate}
+
+\subsection{Mon Compte}
+\begin{enumerate}
+    \item Affiche les informations de l'utilisateur, qui peut les modifier en cliquant sur un bouton en bas de page. Il peut changer son image de profil en cliquant dessus.
+    \item Modification :
+    \begin{enumerate}
+        \item L'utilisateur peut modifier son nom et son adresse mail. Une fonctionnalité pour changer son mot de passe sera ajoutée plus tard.
+        \item Si le membre n'est pas un administrateur ou modérateur, il peut demander à changer de grade ce qui redirige vers la page des services.
+    \end{enumerate}
+\end{enumerate}
+
+\subsection{Administration}
+\begin{enumerate}
+    \item Accessible seulement si l'utilisateur est un administrateur.
+    \item Une barre de recherche qui permet de rechercher des membres en fonction du pseudo, de l'id ou de l'email est mise en place pour faciliter la tâche de l'administrateur.
+    \item Une fonction de tri est aussi disponible. Cliquer sur "Rechercher" sans n'avoir rien sélectionné affiche tous les membres.
+    \item En dessous du tableau des membres, une barre de choix permet de choisir l'action à effectuer sur les membres sélectionnés.
+    \item L'administrateur n'a donc plus qu'à sélectionner les membres sur lesquels il veut effectuer l'action et à valider.
+    \item Les requêtes qui ont été postés via la page Contact s'affichent dans un tableau. L'administrateur peut donc répondre via le mail de la personne et ensuite supprimer la requête.
+\end{enumerate}
+
+
+\section{Informations supplémentaires}
+
+\subsection{CSS}
+\begin{enumerate}
+    \item Certains éléments du CSS ont été inspirés de styles vus sur youtube/internet, Notamment la mise en place du header et de la page de connexion.
+    \item Utilisation de la police d'écriture https://fonts.googleapis.com/css2?family=Poppins.
+    \item Les fonds d'écrans proviennent de freepik.com sauf le fond d'écran de l'administration/du compte qui provient de 10wallpaper.com .
+\end{enumerate}
+
+\subsection{JavaScript}
+\begin{enumerate}
+    \item En général une fonction javascript est utilisée pour brouiller le fond de la barre de navigation lorsqu'un élément passe en dessous.
+    \item Sur plusieurs pages du site sont utilisées des petites icones provenant du site ionic.io/ionicons. De ce fait, lorsque le JavaScript est désactivé, les icons n'apparaissent plus.
+    \item En général, si le JavaScript est désactivé, tous les cas sont traités pour garder l'accessibilité du site. Il est vivement conseillé de ne pas désactiver le JavaScript pour une meilleure expérience.
+\end{enumerate}
+
+\section{Répartition}
+\begin{enumerate}
+    \item Une majorité du php a été écris par Arthur Andraud et Baptiste Mathevon, notamment les index.php ainsi que les fichiers contenant les fonctions.
+    \item Une majorité du CSS a été écris par Baptiste Bouvier, notamment les designs généraux des pages du site.
+    \item Tous les membres du groupe ont fait la même quantité de JavaScript.
+\end{enumerate}
+
+\section{Problèmes rencontrés}
+\begin{enumerate}
+    \item Nous avons essayé d'implémenter un système permettant d'envoyer des mails aux utilisateurs/à l'adresse mail du site mais n'avons pas réussi. Cette fonctionnalité aurait permis d'envoyer un mail au site via la page Contact, plutôt que de stocker la requête dans la base de données ; de même que cela aurait permis de faire une fonctionnalité plus sûre pour changer le mot de passe de l'utilisateur. Nous avons tenté notamment avec un serveur de messagerie SMTP ou PHPmailer mais nous avons abandonné l'idée en ne réussissant pas à faire fonctionner les mails, trouvant que cela nous prenait trop de temps.
+    \item La mise en place de la messagerie instanée nous a donné du fil à retordre, comprendre comment ajax fonctionnait n'était pas une mince affaire. Nous avons finalement réussi à l'implémenter.
+    \item Nous nous sommes rendus compte, juste avant le rendu, que la fonction de tri avait quelques disfonctionnements. Notamment lors du tri des nombres de likes des cours. Une mise à jour future permettra de corriger le problème.
+\end{enumerate}
+
+\section{Fonctionnalités futures}
+\begin{enumerate}
+    \item Volonté d'ajouter ce système de mail afin d'améliorer certaines fonctionnalités du site comme la page de Contact, le changement de mot de passe, le mot de passe oublié et la validation de l'achat dans la boutique.
+    \item Volonté d'implémenter le grade modérateur correctement, ainsi que lui ajouter différents rôles donnant des permissions pour certains endroits du site seulement. Par exemple, implémenter un modérateur du forum, un modérateur des cours et un modérateur pour la messagerie.
+    \item Volonté de Rajouter des réponses au chatbot pour qu'il soit encore plus utile que maintenant.
+    \item Volonté de mise en place d'un système pour confirmer la demande de devenir professeur (vérification du diplôme, etc...)
+    \item Volonté d'améliorer les cours pour pouvoir importer un fichier sur le site en tant que professeur.
+    \item Volonté d'implémenter la possibilité de faire des réels achats pour la boutique et pas simplement stocker dans la base de donnée la commande.
+\end{enumerate}
+
+\newpage
+
+\end{document}
+
+

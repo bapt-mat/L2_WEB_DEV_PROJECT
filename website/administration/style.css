@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* overflow: hidden; */
+}
+
+body h1 {
+    font-size: 3rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+nav a {
+    position: absolute;
+    text-decoration: none;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    right: 5%;
+    top: 100%;
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
+    transition: 0.5s;
+}
+
+nav a:hover {
+    background: rgba(255,255,255,0.8);
+    color: #000;
+}
+
+/* Formulaire 1 */
+
+.form1 {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    background: transparent;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.form1 input[type="text"]{
+    background: rgba(255,255,255,0.7);
+    border: none;
+    border-radius: 6px;
+    margin-right:2px;
+    height: 30px;
+}
+
+.form1 select {
+    background: rgb(255, 255, 255);
+    border-radius: 6px;
+    color: #000;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.form1 .obj {
+    margin-right: 15px;
+}
+
+.form1 input[type="submit"]{
+    position: absolute;
+    right: 20px;
+    top: 35%;
+    height:40px;
+    background: rgb(0,0,0);
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.form1 p {
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.form1 input[type="submit"]:hover{
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    transform: translateY(-3px);
+}
+
+/* Table */
+
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: center;
+    color:rgb(255, 255, 255);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #000;
+    margin: 2rem 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+table input[type="checkbox"] {
+    background-color: #000;
+    color: #fff;
+    accent-color: #000;
+}
+
+table img {
+   width: auto;
+   max-width: 50%;
+}
+
+.select {
+    display: flex;
+    margin: auto;
+    margin-top:10px;
+    background: rgba(255,255,255,0.7);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+select.select {
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+}
+
+.valid {
+    background-color: rgb(0,0,0);
+    color: #fff;
+    width: 70px;
+    height: 40px;
+    transition: 0.3s;
+}
+
+.valid:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    transform: translateY(-3px);
+}
+
+h2 {
+    text-align: center;
+    color: #fff;
+    margin-top: 50px;
+}
+
+.supp_req {
+    text-decoration: underline;
+    color: #fff;
+    transition: 0.4s;
+}
+
+.supp_req:hover {
+    color: red;
+    text-shadow: 5px 5px 10px #fff;
+}
+
+.supp_commande, .voir_commande {
+    text-decoration: underline;
+    color: #fff;
+    transition: 0.4s;
+}
+
+.supp_commande:hover, .voir_commande:hover {
+    color: red;
+    text-shadow: 5px 5px 10px #fff;
+}

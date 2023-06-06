@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    scroll-behavior: smooth;
+    background: url(../Forum/background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+    color: #fff;
+    margin-top: 100px;
+    text-shadow: 0 0 10px #000;
+}
+
+form {
+    margin-top: 100px;
+}
+
+textarea {
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px 0 #000;
+    width: 500px;
+}
+
+input {
+    text-decoration: none;
+    margin: 50px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 6px;
+    padding: 5px;
+    font-size: 1.5em;
+    color: #fff;
+    box-shadow: 0 0 10px 0 #fff;
+    transition: 0.4s;
+}
+
+input:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+a {
+    text-decoration: none;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 6px;
+    padding: 5px;
+    font-size: 1.5em;
+    color: #fff;
+    box-shadow: 0 0 10px 0 #fff;
+    transition: 0.4s;
+}
+
+a:hover {
+    background-color: #fff;
+    color: #000;
+}

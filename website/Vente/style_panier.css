@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+  background: url('background.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 36px;
+}
+
+.article {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.article img {
+  width: 100px;
+  margin-left: 20px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.panier p {
+  text-align: right;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left : 5px;
+}
+
+.commande {
+  margin-top: 40px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin-bottom: 40px;
+  margin-right: 20px;
+  margin-left : 20px;
+  border-radius: 5px;
+
+}
+
+.commande h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.commande label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.commande input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+.commande input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.commande input[type="submit"]:hover {
+  background-color: #0069d9;
+}
+
+a[href="index.php"] {
+  position:relative;
+  text-decoration: none;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  left: 45%;
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
+  transition: 0.5s;
+}
+
+a[href="vider_panier.php"] {
+  position:relative;
+  text-decoration: none;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  top: 80%;
+  left: 45%;
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
+  transition: 0.5s;
+}
+
+h4{
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 20px 20px 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 99;
+    overflow: hidden;
+}
+
+.logo {
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+    text-shadow: 5px 5px 10px #000;
+}
+
+.navigation a.nav {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a.nav::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+.navigation a.nav:hover::after {
+    transform: scaleX(1);
+}
+
+.navigation .popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;   
+    transition: 0.5s;
+}
+
+.navigation .popup:hover {
+    background: #fff;
+    color: #000;
+}
+
+span.notif {
+  position: absolute;
+  background-color: red;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  font-size: 0.7em;
+  border-radius: 50%;
+  z-index:1;
+  left:95%;
+  top: 0;
+  color: #fff;
+}
+
+.breath {
+  box-shadow: 0 0 0 0 rgba(255,255,255,0.7);
+  animation: breath 2s infinite;
+}
+
+@keyframes breath {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255,255,255,0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 5px rgba(255,255,255,0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255,255,255,0.7);
+  }
+}
+
+h3 {
+  color: #fff;
+  font-size: 2rem;
+  text-shadow: 5px 5px 10px #000;
+}
+
+.container {
+  height: 200px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  text-align: center ;
+  margin: 30px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 1);
+}
+  
+.container input {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  font-size: large;
+  padding: 5px;
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.container input:hover {
+  background: #fff;
+  color: #000;
+}
+
+.container select {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid #fff;
+  border-radius: 6px;
+  font-size: large;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.container select:hover {
+  background: rgba(158, 149, 149, 1);
+}
+
+.container p {
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-shadow: 5px 5px 10px red;
+  margin-top: 15px;
+}
+
+.wrapper {
+  position:relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top : 10%;
+
+}
+
+.wrapper .texte {
+  color: #fff;
+  font-size: 30px;
+  text-shadow: 5px 5px 10px #000;
+  margin: 20px;
+}
+
+.wrapper .changer_texte{
+  width : 300px;
+  height : 50px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 5px;
+}
+
+.changer_texte li {
+  list-style: none;
+  color : #e27e59;
+  font-size: 30px;
+  text-shadow: 5px 2px 5px #000;
+  position: relative;
+  top : 0;
+  animation : slide 24s steps(8) infinite;
+}
+
+@keyframes slide {
+  100%{
+    top : -360px;
+  }
+}
+
+.changer_texte li span {
+  display: block;
+  overflow: hidden;
+  animation: reveal 3s ease-in-out forwards infinite;
+}
+
+@keyframes reveal {
+  0% {
+      width: 0;
+  }
+  50% {
+      width: 100%;
+  }
+  100% {
+      width: 0;
+  }
+}

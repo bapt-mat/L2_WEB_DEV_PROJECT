@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('background.jpg') no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    scroll-behavior: smooth;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10px 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 99;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.brouillard {
+    backdrop-filter: blur(30px);
+}
+
+.logo {
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+    text-shadow: 5px 5px 10px #000;
+}
+
+.navigation a.nav {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 25px;
+}
+
+.navigation a.nav::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+.navigation a.nav:hover::after {
+    transform: scaleX(1);
+}
+
+.navigation .popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;   
+    transition: 0.5s;
+}
+
+.navigation .popup:hover {
+    background: #fff;
+    color: #000;
+}
+
+span.notif {
+    position: absolute;
+    background-color: red;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    font-size: 0.7em;
+    border-radius: 50%;
+    z-index:1;
+    left:95%;
+    top: 0;
+    color: #fff;
+}
+
+main {
+    position: relative;
+    z-index: 1;
+    margin-top: 100px;
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 4em;
+    color: #fff;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 40px;
+    text-shadow: 5px 5px 10px #000;
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 95%;
+    border: 2px solid #fff;
+    margin: auto;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    color: #fff;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    line-height: 40px;
+    text-align: center;
+}
+
+.text p {
+    text-align: center;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+div.suite {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.breath {
+    box-shadow: 0 0 0 0 rgba(255,255,255,0.7);
+    animation: breath 2s infinite;
+}
+  
+@keyframes breath {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255,255,255,0.7);
+    }
+    50% {
+      box-shadow: 0 0 0 5px rgba(255,255,255,0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(255,255,255,0.7);
+    }
+}
+
+.chatbot-display {
+    position: fixed;
+    margin: auto;
+    padding: 20px;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    backdrop-filter: blur(5px);
+    z-index: 5;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 7px 0 #fff;
+}
+
+.chatbot-hide {
+    display: none;
+}
+
+.chatbot a{
+    color : #2467db;
+}
+
+.icon-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.chatbot input[type="text"] {
+    margin-top: 20px;
+    border-radius: 6px;
+    padding: 3px;
+    text-align: center;
+}
+
+.chatbot input[type="submit"] {
+    text-align: center;
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 6px;
+    padding: 5px;
+    margin: 20px 0 0 100px;
+    box-shadow: 0 0 10px 0 #fff;
+    transition: 0.5s;
+}
+
+.chatbot input[type="submit"]:hover {
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.chatbot-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 75px;
+    height: 75px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background-color: #000;
+    font-size: 2em;
+    padding:10px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.chatbot-btn:hover {
+    background-color: #be7b2f;
+    border-color: #000;
+}
+
+.chatbot-btn>ion-icon {
+    position: relative;
+    margin-top: 10px;
+}

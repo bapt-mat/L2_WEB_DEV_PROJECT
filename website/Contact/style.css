@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('background.jpg') no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 20px 20px 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 99;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.brouillard {
+    backdrop-filter: blur(20px);
+}
+
+.logo {
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+    text-shadow: 5px 5px 10px #000;
+}
+
+.navigation a.nav {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a.nav::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+.navigation a.nav:hover::after {
+    transform: scaleX(1);
+}
+
+.navigation .popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;   
+    transition: 0.5s;
+}
+
+.navigation .popup:hover {
+    background: #fff;
+    color: #000;
+}
+
+span.notif {
+    position: absolute;
+    background-color: red;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    font-size: 0.7em;
+    border-radius: 50%;
+    z-index:1;
+    left:95%;
+    top: 0;
+    color: #fff;
+}
+
+main {
+    display:flex;
+    margin-top: 150px;
+    justify-content: center;
+}
+
+.container {
+    margin:auto;
+    width: 50%;
+    height: 100%;
+    max-width: 1000px;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding:10px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 #fff; 
+}
+
+#contact :nth-child(n) {
+    margin-top:30px;
+    text-align: center;
+}
+
+#contact>h2 {
+    color: #fff;
+    text-shadow: 5px 5px 10px #000;
+}
+
+.field {
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 5px;
+    color: #fff;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    transition: 0.4s;
+}
+
+.field:hover {
+    background: #fff;
+    color: #000;
+}
+
+.btn {
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 5px;
+    color: #fff;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #000;
+} 

@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: url('background.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 5px 5px 10px #000;
+  margin: 20px 0 20px 0;
+}
+
+.liste_cours {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  padding: 20px;
+  width: 500px;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
+}
+
+a:not(.ret) {
+  text-decoration: none;
+}
+
+.cours {
+  display: flex;
+  justify-content: space-between;
+  width: 450px;
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px 0 10px 0;
+  transition: 0.4s;
+}
+
+.cours:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.info {
+  width: 300px;
+  color: #fff;
+}
+
+.like {
+  width: 28px;
+  height: 28px;
+  position: relative;
+  background: transparent;
+  color: #fff;
+  border: none;
+  font-size: 1em ;
+}
+
+.trans {
+  transform: translateX(20px);
+}
+
+.icon {
+  float: right;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 2px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.icon:hover {
+  color: red;
+}
+
+.supp{
+  padding: 3px;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: blue;
+  transition: 0.4s;
+}
+
+.supp:hover {
+  color: red;
+  box-shadow: 0 0 10px 0 #fff;
+}
+
+.ret {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
+  transition: 0.4s;
+}
+
+.ret:hover {
+  background: #fff;
+  color: #000;
+}
+  

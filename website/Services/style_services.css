@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    scroll-behavior: smooth;
+    background: url(../Forum/background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 20px 20px 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 99;
+    backdrop-filter: blur(20px);
+    overflow: hidden;
+}
+.logo {
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+    text-shadow: 5px 5px 10px #000;
+}
+
+.navigation a.nav {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a.nav::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+.navigation a.nav:hover::after {
+    transform: scaleX(1);
+}
+
+.navigation .popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;   
+    transition: 0.5s;
+}
+
+.navigation .popup:hover {
+    background: #fff;
+    color: #000;
+}
+
+span.notif {
+    position: absolute;
+    background-color: red;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    font-size: 0.7em;
+    border-radius: 50%;
+    z-index:1;
+    left:95%;
+    top: 0;
+    color: #fff;
+}
+
+div.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 1px;
+    margin-bottom: 100px;
+}
+
+div.all {
+    position: relative;
+    width: 500px;
+    height: auto;
+    border: 2px solid #fff;
+    margin: auto;
+    margin-top: 5px;
+    padding: 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    color: #000000;
+    text-align: center;
+    box-shadow: 0 0 10px 0 #000;
+}
+
+div.all>h3 {
+    font-size: 1.5em;
+    text-decoration: underline;
+    color: #fff;
+    margin-top: 20px;
+    text-shadow: 5px 5px 10px #000;
+}
+
+div.all>ul {
+    list-style: none;
+    margin: 20px;
+    margin-top: 50px;
+    color: #fff;
+}
+
+div.all>ul>li {
+    margin: 20px;
+}
+
+div.all>ul>li>a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    border: 1px solid #fff;
+    border-radius: 6px;
+    box-shadow: 0 0 10px 0 #000;
+    padding: 5px;
+    transition: 0.4s;
+}
+
+div.all>ul>li>a:hover {
+    background: #fff;
+    color: #000;
+}
+
+div.all>ul>li>p {
+    font-size: 1.5em;
+    text-shadow: 5px 5px 10px #000;
+}
+
+/*PARALLAX*/
+
+section{
+    position: relative;
+    width: 100%;
+    height : 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section:before{
+    content: '';
+    position: absolute;
+    top : 0;
+    left : 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+section img{
+    position : absolute;
+    top : 0;
+    left : 0;
+    width : 100%;
+    height : 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+#arbres_droit{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+#titre{
+    position: relative;
+    font-size : 10em;
+    z-index: 1;
+    color: #fff;
+    text-shadow: 5px 5px 10px #000;
+    text-align: center;
+}
+
+.breath {
+    box-shadow: 0 0 0 0 rgba(255,255,255,0.7);
+    animation: breath 2s infinite;
+}
+  
+@keyframes breath {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255,255,255,0.7);
+    }
+    50% {
+      box-shadow: 0 0 0 5px rgba(255,255,255,0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(255,255,255,0.7);
+    }
+}

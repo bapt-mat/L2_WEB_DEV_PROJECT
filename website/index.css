@@ -1,0 +1,31 @@
+body {
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('background.jpg') no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    scroll-behavior: smooth;
+}
+
+a {
+  display: block;
+  text-align: center;
+  font-size: 45px;
+  color: #333;
+  text-decoration: none;
+  margin-top: 200px; 
+}
+
+a:hover {
+  color: #fff; /* ajuster la couleur au survol souhaitée */
+}
+
+h3 {
+  text-align: center;
+  font-size: 25px;
+  color: #000;
+  margin-top: 20px; /* ajuster selon la distance souhaitée par rapport au lien a */
+}
+

@@ -1,0 +1,159 @@
+
+/* Styles de base */
+body {
+    background: url('background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.ret {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
+    transition: 0.4s;
+}
+
+.ret:hover {
+    background: #fff;
+    color: #000;
+}
+
+.info {
+    position: fixed;
+    top: 0;
+    right: 0;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    margin: 10px;
+    font-size: 1.4em;
+    text-shadow: 5px 5px 10px #000;
+}
+
+h1, h3 {
+    color: #fff;
+}
+
+h1 {
+    font-size: 2em;
+    text-transform: uppercase;
+    text-shadow: 5px 5px 10px #000;
+}
+
+h3 {
+    margin: 0;
+    border-bottom: 1px solid #fff;
+}
+
+.supp {
+    text-decoration: none;
+    text-align:  right;
+    color: blue;
+    transition: 0.4s;
+}
+
+.supp:hover {
+    color: red;
+    text-shadow: 5px 5px 10px #fff;
+}
+
+.date_supp {
+    border-top: 1px solid #fff;
+}
+
+.date_supp>.supp {
+    float: right;
+}
+
+
+/* Mise en page */
+
+#messages_forum {
+    margin-bottom: 20px;
+}
+
+.message {
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    color:#fff;
+    background-color: rgba(0,0,0,0.4);
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    resize: vertical;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+input[type="submit"] {
+    background-color: rgba(0,0,0,0.4);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+input[type="submit"]:hover {
+    background-color: #fff;
+    color:#000
+}
+
+.form2 {
+    margin-bottom: 30px;
+}
+
+span.page {
+    color: #fff;
+    margin-right: 10px;
+}
+
+a.page {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5em;
+    padding: 5px;
+    margin-left: 10px;
+    transition: 0.4s;
+}
+
+span.icon {
+    margin-top: 10px;
+}
+
+a.page:hover {
+    color: #000;
+    text-shadow: 5px 5px 10px #fff;
+}
+@media (min-width: 768px) {
+    body {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+}
