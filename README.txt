@@ -4,7 +4,7 @@ PAR :
     -BOUVIER BAPTISTE
     -MATHEVON BAPTISTE
     
-Le site web est accessible à l'adresse suivante :
+Le site web est accessible à l'adresse suivante (depuis le réseau de l'UJM / sinon il faut modifier vos ports) :
 https://webetu.univ-st-etienne.fr/mb00560u/
 
 Certaines parties de notre site ne sont accessibles qu'aux membres inscrits, afin de profiter pleinement de l'expérience de notre site vous pouvez vous connecter a ce dernier avec les logins suivant :
