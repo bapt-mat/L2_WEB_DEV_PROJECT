@@ -1,14 +1,14 @@
-PROJET DE DEVELOPPEMENT WEB
-PAR :
+WEB DEVELOPMENT PROJECT
+BY :
     -ANDRAUD ARTHUR
     -BOUVIER BAPTISTE
     -MATHEVON BAPTISTE
     
-Le site web est accessible à l'adresse suivante (depuis le réseau de l'UJM / sinon il faut modifier vos ports) :
+The website can be accessed at the following address (from the UJM network / otherwise you'll need to change your ports):
 https://webetu.univ-st-etienne.fr/mb00560u/
 
-Certaines parties de notre site ne sont accessibles qu'aux membres inscrits, afin de profiter pleinement de l'expérience de notre site vous pouvez vous connecter a ce dernier avec les logins suivant :
+Some parts of our site are only accessible to registered members. To enjoy the full experience of our site, you can connect to it with the following logins:
 Login/Email : admin
-Mot de Passe : admin
+Password: admin
 
-Nous avons également crée un compte membre (membre1, membre1) et un compte professeur (prof1, prof1) afin de voir les différentes fonctionnalités accessibles selon le grade.
+We've also created a member account (member1, member1) and a teacher account (prof1, prof1) so that you can see the different features available to each grade.
